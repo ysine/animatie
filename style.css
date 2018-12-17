@@ -1,0 +1,120 @@
+.animatie-menu, .button-effect {
+  width: 3em;
+  height: 3em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  list-style:none;
+}
+#validatie {
+position: absolute;
+bottom: 0;
+display: flex;
+flex-direction: column;
+}
+.animatie-menu {
+  position: fixed;
+  top: 5px;
+  left: 50px;
+  transition: transform 6s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+  transition: transform 6s cubic-bezier(0.39, 1.52, 0.46, 0.92), -webkit-transform 1.125s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+  cursor: pointer;
+}
+
+.button-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.button-effect.closed {
+          transform: translate3d(0, 0, 0) !important;
+}
+
+.main {
+  color: #030f01;
+  text-align: center;
+}
+
+.animatie-menu-closed .main {
+  color: black;
+}
+
+.test3 {
+  background-color: dodgerblue;
+  top: 65px;
+  left: 160px;
+  transition: all 0.525s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+}
+
+.test3:hover{
+  animation: rotate-before 4.2s ease infinite;
+}
+
+.animatie-menu-closed .test3 {
+  -webkit-transform: translate3d(-160%, -65px, 0) rotate(-180deg);
+          transform: translate3d(-160%, -65px, 0) rotate(-180deg);
+  background: transparent;
+
+}
+
+.test2 {
+  background-color: red;
+  top: 120px;
+  left: 110px;
+  transition: all 0.675s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+  transition-duration: 0.675s;
+}
+
+.test2:hover{
+  animation: rotate-before 4.2s ease infinite;
+}
+
+.animatie-menu-closed .test2 {
+  transform: translate3d(-110%, -120px, 0) rotate(-180deg);
+  background: transparent;
+
+}
+
+.test1 {
+  background-color: green;
+  top: 170px;
+  left: 50px;
+  transition: all 0.825s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+  transition-duration: 0.825s;
+}
+
+.test1:hover{
+  animation: rotate-before 4.2s ease infinite;
+}
+
+.animatie-menu-closed .test1 {
+  transform: translate3d(-50%, -170px, 0) rotate(-180deg);
+  background: transparent;
+}
+
+.test4 {
+  background-color: #fa7d39;
+  top: 215px;
+  left: -20px;
+  transition: all 0.975s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+  transition-duration: 0.975s;
+}
+
+.test4:hover{
+  animation: rotate-before 4.2s ease infinite;
+}
+
+.animatie-menu-closed .test4 {
+  transform: translate3d(20%, -215px, 0) rotate(-180deg);
+  background: transparent;
+}
+
+@keyframes rotate-before {
+  100% {
+		transform: rotateZ(360deg);
+	}
+}
